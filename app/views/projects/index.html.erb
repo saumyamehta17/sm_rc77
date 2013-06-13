@@ -1,0 +1,26 @@
+<h1>Listing projects</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @projects.each do |project| %>
+  <tr>
+    <td><%= project.name %></td>
+    <td><%= link_to 'Show', project %></td>
+    <td><%= link_to 'Edit', edit_project_path(project) %></td>
+    <td><%= link_to 'Destroy', [:delete , project] %></td>
+    <!-- why we cant do like follow -->
+    <!-- <td><%#= link_to 'Destroy', delete_project_path %></td> -->
+  </tr> 
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Project', new_project_path %>
+

@@ -1,0 +1,6 @@
+<%= form_for @project , :html =>  {:method => :delete} do |f| %>
+    <h3>Are u sure to delete</h3>
+    <p><%= f.submit "destroy" %> or <%= link_to "cancel" , projects_path %>
+    </p>
+<% end %>
+    

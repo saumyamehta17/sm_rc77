@@ -2,6 +2,7 @@ SmRc77::Application.routes.draw do
   resources :projects do
     member do
       get 'delete'
+      delete 'delete' , action: :destroy
     end
   end
 
